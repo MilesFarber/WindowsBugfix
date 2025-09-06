@@ -1,0 +1,687 @@
+Windows Registry Editor Version 5.00
+
+;MAJOR FIXES
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"AlwaysShowMenus"=dword:00000001 ;Fixes the bug of the menu bar disappearing in File Explorer.
+"AutoCheckSelect"=dword:00000001 ;Fixes the bug of checkboxes disappearing in File Explorer.
+"DesktopLivePreviewHoverTime"=dword:00000001 ;Fixes the bug of delayed Aero Peek.
+"DisablePreviewDesktop"=dword:00000001 ;Fixes the bug of Aero Peek being enabled by default.
+"DisallowShaking"=dword:00000001 ;Fixes the bug of Aero Shake being enabled by default.
+"EncryptionContextMenu"=dword:00000001 ;Fixes the bug of the context menu not having Encrypt and Decrypt options.
+"EnableTaskGroups"=dword:00000000 ;Fixes tasks in the taskbar overlapping with each other.
+"HideDrivesWithNoMedia"=dword:00000000 ;Fixes the bug of drives in File Explorer disappearing when empty.
+"HideFileExt"=dword:00000000 ;Fixes the bug of file extensions disappearing in File Explorer.
+"HideIcons"=dword:00000000 ;Fixes the bug of the desktop disappearing.
+"HideMergeConflicts"=dword:00000000 ;Fixes the bug of File Explorer NOT warning the user about merge conflicts.
+"IconsOnly"=dword:00000000 ;Fixes the bug of thumbnails not appearing in File Explorer (Ebussy Effect).
+"ListviewAlphaSelect"=dword:00000001 ;Fixes the bug of search being autoselected when typing in File Explorer.
+"MapNetDrvBtn"=dword:00000001 ;Fixes the bug of the Map Network Drive button being disabled in certain versions of Windows.
+"NavPaneExpandToCurrentFolder"=dword:00000000 ;Fixes crashing from the Navigation Pane.
+"NavPaneShowAllCloudStates"=dword:00000000 ;Fixes crashing from the Navigation Pane.
+"NavPaneShowAllFolders"=dword:00000000 ;Fixes crashing from the Navigation Pane.
+"SeparateProcess"=dword:00000000 ;Fixes the bug of File Explorer launching on a separate process from Explorer.Exe and leaking memory.
+"ShowEncryptCompressedColor"=dword:00000001 ;Fixes the bug of File Explorer NOT warning about encrypted or compressed NTFS folders.
+"ShowInfoTip"=dword:00000001 ;Fixes the bug of hovering on items in File Explorer not doing anything.
+"ShowSecondsInSystemClock"=dword:00000001 ;Fixes the bug of seconds in the taskbar clock not being turned on by default, seriously what if the user installs something horrible and it freezes and they cannot even tell?
+"ShowStatusBar"=dword:00000001 ;Fixes the bug of the File Explorer status bar disappearing.
+"ShowMoreTiles"=dword:00000001 ;Fixes the bug of tiles in the Start Menu being 3 wide instead of 4 by default.
+"ShowAppListInStartMenu"=dword:00000001 ;Fixes the bug of the app list in Start Menu being hidden. Unfortunately, this is completely, entirely unfixable in Windows 11 and beyond.
+"TaskbarAnimations"=dword:00000001 ;Fixes the bug of elements in the taskbar freezing.
+"TaskbarSmallIcons"=dword:00000001 ;Fixes the bug of Windows 11's small taskbar option doing nothing.
+
+[HKEY_CURRENT_USER\Control Panel\Cursors]
+"ContactVisualization"=dword:00000001 ;Fixes the bug of Windows not warning the user when using a poor quality touchscreen.
+"GestureVisualization"=dword:0000001f ;No clue why setting this to anything other than 31 makes the bugfix not work.
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"CursorBlinkRate"="1" ;Fixes the bug of the text cursor not blinking in sync with the monitor's refresh rate.
+"DragHeight"="4" ;Fixes the bug of drag operations requiring an enormous amount of mouse movement before being recognized.
+"DragWidth"="4" ;Fixes the bug of drag operations requiring an enormous amount of mouse movement before being recognized.
+"ForegroundFlashCount"=dword:00000010 ;Fixes the bug of foreground tasks not flashing in the taskbar.
+"LowLevelHooksTimeout"=dword:00000001 ;Fixes the bug of Windows never declaring a task unresponsive.
+"MenuShowDelay"="1" ;Fixes the bug of hover menus having a massive delay before showing.
+"PaintDesktopVersion"=dword:00000001 ;Fixes the bug of the show OS version toggle not working.
+"WaitToKillAppTimeout"="1" ;Fixes the bug of Windows waiting several minutes before killing a task after being told to kill it.
+"WaitToKillServiceTimeout"=dword:00000001 ;Fixes the bug of Windows waiting several minutes before killing a service after being told to kill it.
+"WheelScrollChars"="1" ;Fixes the bug of Windows skipping characters when scrolling with a mouse wheel.
+"WheelScrollLines"="1" ;Fixes the bug of Windows skipping lines when scrolling with a mouse wheel.
+"AutoColorization"=dword:00000001 ;Fixes the bug of system color accents not adapting to the desktop background.
+"AutoEndTasks"="1" ;Fixes the bug of Windows not ending tasks at all when told by Task Manager.
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"AppsUseLightTheme"=dword:00000000 ;Fixes the bug of light theme automatically turning on.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"AppsUseLightTheme"=dword:00000000 ;Fixes the bug of light theme automatically turning on.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SilentInstalledAppsEnabled"=dword:00000000 ;Fixes the bug of Windows not notifying the user when suggested apps are being installed.
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo]
+"Enabled"=dword:00000000 ;Fixes the bug of the disable personalized advertising ID for user-based ads button not working.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
+"AllowRemoteRPC"=dword:00000001 ;Fixes the bug of Remote Procedure Call connections to the Terminal Server being disabled by default.
+"DelayConMgrTimeout"=dword:00000000 ;Fixes the bug of Connection Manager Timeout having a massive delay.
+"DeleteTempDirsOnExit"=dword:00000001 ;Fixes the bug of Remote Desktop temp directories not being deleted after session exit.
+"fDenyTSConnections"=dword:00000000 ;Fixes the bug of Terminal Services connections being disabled by default.
+"fSingleSessionPerUser"=dword:00000001 ;Fixes multiple session conflicts.
+"PerSessionTempDir"=dword:00000001 ;Fixes the bug of temp directories not being separated by session by default.
+"RailShowallNotifyIcons"=dword:00000001 ;Fixes the bug of RemoteApp notifications not showing.
+"RDPVGCInstalled"=dword:00000001 ;Fixes the bug of GPU's not working in Remote Desktop.
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"DoubleClickHeight"="8" ;Fixes the bug of double click not working due to very slight fluctuations in cursor position.
+"DoubleClickWidth"="8" ;Fixes the bug of double click not working due to very slight fluctuations in cursor position.
+"DoubleClickSpeed"="250" ;Fixes the bug of clicking two different items registering as a double click.
+"MouseHoverHeight"="4" ;Fixes the bug of hovering on items not working unless the mouse is PERFECTLY still.
+"MouseHoverWidth"="4" ;Fixes the bug of hovering on items not working unless the mouse is PERFECTLY still.
+"MouseHoverTime"="250" ;Fixes the bug of hover events taking ages to register.
+"MouseSensitivity"="10" ;Fixes the bug of mouse acceleration being forced on.
+"MouseSpeed"="0" ;Fixes the bug of mouse acceleration being forced on.
+"MouseThreshold1"="0" ;Fixes the bug of mouse acceleration being forced on.
+"MouseThreshold2"="0" ;Fixes the bug of mouse acceleration being forced on.
+"SmoothMouseXCurve"=hex:\
+	00,00,00,00,00,00,00,00,\
+	C0,CC,0C,00,00,00,00,00,\
+	80,99,19,00,00,00,00,00,\
+	40,66,26,00,00,00,00,00,\
+	00,33,33,00,00,00,00,00
+"SmoothMouseYCurve"=hex:\
+	00,00,00,00,00,00,00,00,\
+	00,00,38,00,00,00,00,00,\
+	00,00,70,00,00,00,00,00,\
+	00,00,A8,00,00,00,00,00,\
+	00,00,E0,00,00,00,00,00
+;Fixes the bug of mouse acceleration being forced on.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\Start]
+"AllowPinnedFolderDocuments"=dword:00000001
+"AllowPinnedFolderDocuments_ProviderSet"=dword:00000001
+"AllowPinnedFolderDownloads"=dword:00000001
+"AllowPinnedFolderDownloads_ProviderSet"=dword:00000001
+"AllowPinnedFolderFileExplorer"=dword:00000001
+"AllowPinnedFolderFileExplorer_ProviderSet"=dword:00000001
+"AllowPinnedFolderMusic"=dword:00000001
+"AllowPinnedFolderMusic_ProviderSet"=dword:00000001
+"AllowPinnedFolderNetwork"=dword:00000001
+"AllowPinnedFolderNetwork_ProviderSet"=dword:00000001
+"AllowPinnedFolderPersonalFolder"=dword:00000001
+"AllowPinnedFolderPersonalFolder_ProviderSet"=dword:00000001
+"AllowPinnedFolderPictures"=dword:00000001
+"AllowPinnedFolderPictures_ProviderSet"=dword:00000001
+"AllowPinnedFolderSettings"=dword:00000001
+"AllowPinnedFolderSettings_ProviderSet"=dword:00000001
+"AllowPinnedFolderVideos"=dword:00000001
+"AllowPinnedFolderVideos_ProviderSet"=dword:00000001
+;Fixes the bug of user folders not showing in the Start Menu.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"HibernateEnabled"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings]
+"ShowHibernateOption"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings]
+"ShowLockOption"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings]
+"ShowSleepOption"=dword:00000001
+;Fixes the bug of shutdown options not showing in the Start Menu.
+
+[HKEY_CURRENT_USER\Software\Microsoft\GameBar]
+"AllowAutoGameMode"=dword:00000001
+"AutoGameModeEnabled"=dword:00000001
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_Enabled"=dword:00000000
+;Fixes the bug of GameDVR destroying performance.
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility]
+"DynamicScrollbars"=dword:00000000
+[HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
+"Flags"="506"
+[HKEY_CURRENT_USER\Control Panel\Accessibility\ToggleKeys]
+"Flags"="58"
+[HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
+"Flags"="122"
+;Fixes the bug of Sticky Keys shortcuts being enabled by default.
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Clipboard]
+"EnableClipboardHistory"=dword:00000001
+"EnableCloudClipboard"=dword:00000001
+;Fixes the bug of clipboard history not working.
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"EnableAutoTray"=dword:00000000 ;Fixes the bug of the taskbar not showing background tasks.
+"UserSignedIn"=dword:00000001 ;Fixes the bug of the taskbar not showing background tasks.
+"PostAppInstallTasksCompleted"=dword:00000001 ;Fixes the bug of the taskbar not showing background tasks.
+"ShowDriveLettersFirst"=dword:00000004 ;Fixes the bug of drive letters being showed AFTER the drive's name, which causes them to become hidden when the drive's name is too long.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLinkedConnections"=dword:00000001 ;Fixes the bug of network drives disappearing when a program is elevated.
+"EnableVirtualization"=dword:00000001 ;Fixes the bug of virtualization not being enabled even when turned on in the BIOS.
+"VerboseStatus"=dword:00000001 ;Fixes the bug of the log in screen not showing what it's doing.
+"EnableLUA"=dword:00000000 ;Fixes the bug of LUA disabling mouse and keyboard.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control]
+"SvcHostSplitThresholdInKB"=dword:FFFFFFFF ;Fixes the bug of SVCHosts multiplying like Eevee and leaking memory.
+"WaitToKillServiceTimeout"="1" ;Fixes the bug of Windows waiting several minutes before killing a service.
+"HungAppTimeout"="1" ;Fixes the bug of Windows waiting several minutes before killing an app.
+"AutoEndTasks"="1" ;Fixes the bug of Windows not automatically unloading tasks from memory after they are killed.
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"FolderType"="NotSpecified" ;Fixes the bug of File Explorer getting stuck while calculating a folder's type.
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"ClearRecentDocsOnExit"=dword:00000001 ;Fixes the bug of File Explorer getting stuck while calculating a folder's type.
+"DisableFolderTypeAutoDiscovery"=dword:00000001 ;Fixes the bug of File Explorer getting stuck while calculating a folder's type.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
+"Autorun"=dword:00000000 ;Fixes the bug of folders being locked from being deleted because of Thumbs.db.
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Thumbnail Cache]
+"Autorun"=dword:00000000 ;Fixes the bug of folders being locked from being deleted because of Thumbs.db.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\SessionData]
+"AllowLockScreen"=dword:00000000 ;Fixes the bug of Windows being stuck in the lock screen.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
+"NoLockScreen"=dword:00000001 ;Fixes the bug of Windows being stuck in the lock screen.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"EnergyEstimationEnabled"=dword:00000001 ;Fixes the bug of Windows not displaying the estimated time remaining of the battery.
+[HKEY_CURRENT_USER\Software\Microsoft\Shell\USB]
+"NotifyOnWeakCharger"=dword:00000001 ;Fixes the bug of Windows not notifying the user when the battery is discharging due to the user plugging in a weak charger.
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\ColorFiltering]
+"HotkeyEnabled"=dword:00000001 ;Books being white was a mistake.
+"Active"=dword:00000000 ;Books being white was a mistake.
+"FilterType"=dword:00000001 ;Books being white was a mistake.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
+"AllowTelemetry"=dword:00000000 ;Fixes the bug of telemetry destroying battery life.
+"MaxTelemetryAllowed"=dword:00000000 ;Fixes the bug of telemetry destroying battery life.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\TouchPrediction]
+"Latency"=dword:00000001 ;Fixes the bug of touchscreens having a smoothing effect that causes delay.
+"SampleTime"=dword:00000001 ;Fixes the bug of touchscreens having a smoothing effect that causes delay.
+
+;MINOR FIXES
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"ClearPageFileAtShutdown"=dword:00000001 ;Fixes the bug of the page file not being deleted at shutdown.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager]
+"EnthusiastMode"=dword:00000001 ;Fixes the bug of File Explorer not showing details when doing a transfer, copy, etc operation.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoSecurityTab"=dword:00000000 ;Fixes the bug of the security tab not showing in File Explorer.
+
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+"PrintScreenKeyForSnippingEnabled"=dword:00000001 ;Fixes the bug of the Print Screen Key not starting the snipping tool.
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PageSpaceControlSizer"=hex:a0,00,00,00,00,00,00,00,00,00,00,00,ec,03,00,00 ;Fixes the crash caused by the Navigation Pane.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OEM\Device\Capture]
+"NoPhysicalCameraLED"=dword:00000001 ;Fixes the bug of Windows not notifying the user when the Camera has been turned on.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
+"AutoReboot"=dword:00000000 ;Fixes the bug of Windows suddenly rebooting during a BSOD, preventing the user from writing down the error or scanning the QR code.
+
+;Disable Startup delay. This is required to increase start up responsiveness
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize]
+"StartupDelayInMSec"=dword:00000000 ;Fixes the bug of Windows having a massive delay before starting.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableActivityFeed"=dword:00000001 ;Fixes the bug of Timeline not working.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell\Launcher]
+"DisableLightDismiss"=dword:00000000 ;Fixes the bug of Action Center not being dismissed when clicking away from it.
+
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer]
+"DisableThumbsDBOnNetworkFolders"=dword:00000001 ;Fixes the bug of Thumbs.db being used in Network Shared Drives, massively decreasing performance.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarSi"=dword:00000000 ;Fixes the bug of Windows 11's small taskbar option not working.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Configuration Manager]
+"EnablePeriodicBackup"=dword:00000001 ;Fixes the bug of automatic registry backup not working.
+
+;MENU TWEAKS
+
+;Fix the bug of the context menu not showing the Boot To UEFI option.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Firmware]
+"Icon"="bootux.dll,-1016"
+"MUIVerb"="Boot to UEFI Firmware Settings"
+"Position"="Bottom"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Firmware\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/c,shutdown /r /fw' -Verb runAs\""
+
+;Fix the bug of the context menu not showing the Install CAB File option.
+[-HKEY_CLASSES_ROOT\CABFolder\Shell\RunAs]
+[HKEY_CLASSES_ROOT\CABFolder\Shell\RunAs]
+@="Install Cab File"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\CABFolder\Shell\RunAs\Command]
+@="cmd /k dism /online /add-package /packagepath:\"%1\""
+
+;Fix the bug of the context menu not showing Kill All Not Responding Tasks.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\KillNRTasks]
+"icon"="taskmgr.exe,-30651"
+"MUIverb"="Kill all not responding tasks"
+"Position"="Bottom"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\KillNRTasks\command]
+@="CMD.exe /C taskkill.exe /f /fi \"status eq Not Responding\" & Pause"
+
+;Fix the bug of the context menu not showing Open With Notepad.
+[HKEY_CLASSES_ROOT\*\shell\Open With Notepad]
+[HKEY_CLASSES_ROOT\*\shell\Open With Notepad\command]
+@="notepad.exe %1"
+
+;Fix the bug of the context menu not showing DISM options.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\DismContextMenu]
+"Icon"="WmiPrvSE.exe"
+"MUIVerb"="Repair Windows Image"
+"Position"="Bottom"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\DismContextMenu\shell\CheckHealth]
+"HasLUAShield"=""
+"MUIVerb"="Check Health of Windows Image"
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\DismContextMenu\shell\CheckHealth\command]
+@="PowerShell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/k, Dism /Online /Cleanup-Image /CheckHealth' -Verb runAs\""
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\DismContextMenu\shell\RestoreHealth]
+"HasLUAShield"=""
+"MUIVerb"="Repair Windows Image"
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\DismContextMenu\shell\RestoreHealth\command]
+@="PowerShell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/k, Dism /Online /Cleanup-Image /RestoreHealth' -Verb runAs\""
+
+;Fix the bug of the context menu not showing Restart Explorer.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart Explorer]
+"icon"="explorer.exe"
+"Position"="Bottom"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart Explorer\shell\01menu]
+"MUIVerb"="Restart Explorer Now"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart Explorer\shell\01menu\command]
+@=hex(2):63,00,6d,00,64,00,2e,00,65,00,78,00,65,00,20,00,2f,00,63,00,20,00,74,\
+  00,61,00,73,00,6b,00,6b,00,69,00,6c,00,6c,00,20,00,2f,00,66,00,20,00,2f,00,\
+  69,00,6d,00,20,00,65,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,2e,00,65,\
+  00,78,00,65,00,20,00,20,00,26,00,20,00,73,00,74,00,61,00,72,00,74,00,20,00,\
+  65,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,2e,00,65,00,78,00,65,00,00,\
+  00
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart Explorer\shell\02menu]
+"MUIVerb"="Restart Explorer with Pause"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart Explorer\shell\02menu\command]
+@=hex(2):63,00,6d,00,64,00,2e,00,65,00,78,00,65,00,20,00,2f,00,63,00,20,00,40,\
+  00,65,00,63,00,68,00,6f,00,20,00,6f,00,66,00,66,00,20,00,26,00,20,00,65,00,\
+  63,00,68,00,6f,00,2e,00,20,00,26,00,20,00,65,00,63,00,68,00,6f,00,20,00,53,\
+  00,74,00,6f,00,70,00,70,00,69,00,6e,00,67,00,20,00,65,00,78,00,70,00,6c,00,\
+  6f,00,72,00,65,00,72,00,2e,00,65,00,78,00,65,00,20,00,70,00,72,00,6f,00,63,\
+  00,65,00,73,00,73,00,20,00,2e,00,20,00,2e,00,20,00,2e,00,20,00,26,00,20,00,\
+  65,00,63,00,68,00,6f,00,2e,00,20,00,26,00,20,00,74,00,61,00,73,00,6b,00,6b,\
+  00,69,00,6c,00,6c,00,20,00,2f,00,66,00,20,00,2f,00,69,00,6d,00,20,00,65,00,\
+  78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,2e,00,65,00,78,00,65,00,20,00,26,\
+  00,20,00,65,00,63,00,68,00,6f,00,2e,00,20,00,26,00,20,00,65,00,63,00,68,00,\
+  6f,00,2e,00,20,00,26,00,20,00,65,00,63,00,68,00,6f,00,20,00,57,00,61,00,69,\
+  00,74,00,69,00,6e,00,67,00,20,00,74,00,6f,00,20,00,73,00,74,00,61,00,72,00,\
+  74,00,20,00,65,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,2e,00,65,00,78,\
+  00,65,00,20,00,70,00,72,00,6f,00,63,00,65,00,73,00,73,00,20,00,77,00,68,00,\
+  65,00,6e,00,20,00,79,00,6f,00,75,00,20,00,61,00,72,00,65,00,20,00,72,00,65,\
+  00,61,00,64,00,79,00,20,00,2e,00,20,00,2e,00,20,00,2e,00,20,00,26,00,20,00,\
+  70,00,61,00,75,00,73,00,65,00,20,00,26,00,26,00,20,00,73,00,74,00,61,00,72,\
+  00,74,00,20,00,65,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,2e,00,65,00,\
+  78,00,65,00,20,00,26,00,26,00,20,00,65,00,78,00,69,00,74,00,00,00
+
+;Fix the bug of the context menu not showing Restart in Safe Mode.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode]
+"icon"="bootux.dll,-1032"
+"MUIVerb"="Safe Mode"
+"Position"=-
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\001-NormalMode]
+@="Restart in Normal Mode"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\001-NormalMode\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/c,bcdedit /deletevalue {current} safeboot & bcdedit /deletevalue {current} safebootalternateshell & shutdown -r -t 00 -f' -Verb runAs\""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\002-SafeMode]
+@="Restart in Safe Mode"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\002-SafeMode\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/c,bcdedit /set {current} safeboot minimal & bcdedit /deletevalue {current} safebootalternateshell & shutdown -r -t 00 -f' -Verb runAs\""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\003-SafeModeNetworking]
+@="Restart in Safe Mode with Networking"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\003-SafeModeNetworking\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/c,bcdedit /set {current} safeboot network & bcdedit /deletevalue {current} safebootalternateshell & shutdown -r -t 00 -f' -Verb runAs\""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\004-SafeModeCommandPrompt]
+@="Restart in Safe Mode with Command Prompt"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SafeMode\shell\004-SafeModeCommandPrompt\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/c,bcdedit /set {current} safeboot minimal & bcdedit /set {current} safebootalternateshell yes & shutdown -r -t 00 -f' -Verb runAs\""
+
+;Fix the bug of the context menu not showing Create Restore Point.
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Create Restore Point]
+"HasLUAShield"=""
+"Icon"="SystemPropertiesProtection.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Create Restore Point\command]
+@="PowerShell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/c, PowerShell Checkpoint-Computer -Description \"Manual\" -RestorePointType \"MODIFY_SETTINGS\"' -Verb runAs\""
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
+"SystemRestorePointCreationFrequency"=dword:00000000
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SystemProtection]
+"MUIVerb"="System Protection"
+"HasLUAShield"=""
+"Icon"="rstrui.exe"
+"Position"="Bottom"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SystemProtection\shell\001flyout]
+"MUIVerb"="System Protection"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SystemProtection\shell\001flyout\command]
+@="SystemPropertiesProtection.exe"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SystemProtection\shell\002flyout]
+"MUIVerb"="System Restore"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SystemProtection\shell\002flyout\command]
+@="rstrui.exe"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SystemProtection\shell\003flyout]
+"MUIVerb"="Create restore point"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SystemProtection\shell\003flyout\command]
+@="PowerShell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/c, PowerShell Checkpoint-Computer -Description \"Manual\" -RestorePointType \"MODIFY_SETTINGS\"' -Verb runAs\""
+
+;Fix the bug of the context menu not showing Delete Folder Contents.
+[HKEY_CLASSES_ROOT\Directory\shell\Empty]
+"Icon"="shell32.dll,-16715"
+"MUIVerb"="Delete Folder Contents"
+"Position"="bottom"
+"Extended"=-
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\Directory\shell\Empty\shell\001flyout]
+"Icon"="shell32.dll,-16715"
+"MUIVerb"="Delete Folder Contents and Subfolders"
+[HKEY_CLASSES_ROOT\Directory\shell\Empty\shell\001flyout\command]
+@="cmd /c title Empty \"%1\" & (cmd /c echo. & echo This will permanently delete everything in this folder. & echo. & choice /c:yn /m \"Are you sure?\") & (if errorlevel 2 exit) & (cmd /c rd /s /q \"%1\" & md \"%1\")"
+[HKEY_CLASSES_ROOT\Directory\shell\Empty\shell\002flyout]
+"Icon"="shell32.dll,-16715"
+"MUIVerb"="Delete Folder Contents but Not Subfolders"
+[HKEY_CLASSES_ROOT\Directory\shell\Empty\shell\002flyout\command]
+@="cmd /c title Empty \"%1\" & (cmd /c echo. & echo This will permanently delete everything in this folder, but not subfolders. & echo. & choice /c:yn /m \"Are you sure?\") & (if errorlevel 2 exit) & (cmd /c \"cd /d %1 && del /f /q *.*\")"
+
+;Fix the bug of the context menu not showing Inherit permissions.
+[HKEY_CLASSES_ROOT\*\shell\InheritedPermissions]
+"MUIVerb"="Inherited Permissions"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Position"="Bottom"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\*\shell\InheritedPermissions\shell\001flyout]
+"MUIVerb"="Enable inheritance"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\*\shell\InheritedPermissions\shell\001flyout\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /inheritance:e & pause' -Verb runAs\""
+[HKEY_CLASSES_ROOT\*\shell\InheritedPermissions\shell\002flyout]
+"MUIVerb"="Disable inheritance and convert into explicit permissions"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\*\shell\InheritedPermissions\shell\002flyout\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /inheritance:d & pause' -Verb runAs\""
+[HKEY_CLASSES_ROOT\*\shell\InheritedPermissions\shell\003flyout]
+"MUIVerb"="Disable inheritance and remove"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\*\shell\InheritedPermissions\shell\003flyout\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /inheritance:r & pause' -Verb runAs\""
+[HKEY_CLASSES_ROOT\Directory\shell\InheritedPermissions]
+"MUIVerb"="Inherited Permissions"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Position"="Bottom"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\Directory\shell\InheritedPermissions\shell\001flyout]
+"MUIVerb"="Enable inheritance"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\Directory\shell\InheritedPermissions\shell\001flyout\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /inheritance:e & pause' -Verb runAs\""
+[HKEY_CLASSES_ROOT\Directory\shell\InheritedPermissions\shell\002flyout]
+"MUIVerb"="Disable inheritance and convert into explicit permissions"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\Directory\shell\InheritedPermissions\shell\002flyout\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /inheritance:d & pause' -Verb runAs\""
+[HKEY_CLASSES_ROOT\Directory\shell\InheritedPermissions\shell\003flyout]
+"MUIVerb"="Disable inheritance and remove"
+"HasLUAShield"=""
+[HKEY_CLASSES_ROOT\Directory\shell\InheritedPermissions\shell\003flyout\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /inheritance:r & pause' -Verb runAs\""
+
+;Fix the bug of the context menu not showing Run System File Checker.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\SFC]
+"Icon"="WmiPrvSE.exe"
+"MUIVerb"="System File Checker"
+"Position"="Bottom"
+"Extended"=-
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\SFC\shell\001menu]
+"HasLUAShield"=""
+"MUIVerb"="Run System File Checker"
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\SFC\shell\001menu\command]
+@="PowerShell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/s,/k, sfc /scannow' -Verb runAs\""
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\SFC\shell\002menu]
+"MUIVerb"="System File Checker log"
+[HKEY_CLASSES_ROOT\DesktopBackground\shell\SFC\shell\002menu\command]
+@="PowerShell (sls [SR] C:\Windows\\Logs\\CBS\\CBS.log -s).Line >\"C:\Users\Miles\\Desktop\\sfcdetails.txt\""
+
+;Fix the bug of the context menu not showing Copy As Path.
+[HKEY_CLASSES_ROOT\Allfilesystemobjects\shell\windows.copyaspath]
+@="Copy &as path"
+"Icon"="imageres.dll,-5302"
+"InvokeCommandOnSelection"=dword:00000001
+"VerbHandler"="{f3d06e7c-1e45-4a26-847e-f9fcdee59be0}"
+"VerbName"="copyaspath"
+
+;Fix the bug of the context menu not showing File Hashes.
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash]
+"MUIVerb"="Hash"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\01SHA1]
+"MUIVerb"="SHA1"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\01SHA1\command]
+@="powershell.exe -noexit get-filehash -literalpath '%1' -algorithm SHA1 | format-list"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\02SHA256]
+"MUIVerb"="SHA256"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\02SHA256\command]
+@="powershell.exe -noexit get-filehash -literalpath '%1' -algorithm SHA256 | format-list"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\03SHA384]
+"MUIVerb"="SHA384"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\03SHA384\command]
+@="powershell.exe -noexit get-filehash -literalpath '%1' -algorithm SHA384 | format-list"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\04SHA512]
+"MUIVerb"="SHA512"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\04SHA512\command]
+@="powershell.exe -noexit get-filehash -literalpath '%1' -algorithm SHA512 | format-list"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\05MACTripleDES]
+"MUIVerb"="MACTripleDES"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\05MACTripleDES\command]
+@="powershell.exe -noexit get-filehash -literalpath '%1' -algorithm MACTripleDES | format-list"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\06MD5]
+"MUIVerb"="MD5"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\06MD5\command]
+@="powershell.exe -noexit get-filehash -literalpath '%1' -algorithm MD5 | format-list"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\07RIPEMD160]
+"MUIVerb"="RIPEMD160"
+[HKEY_CLASSES_ROOT\*\shell\GetFileHash\shell\07RIPEMD160\command]
+@="powershell.exe -noexit get-filehash -literalpath '%1' -algorithm RIPEMD160 | format-list"
+
+;Fix the bug of the context menu not showing Magnifier.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier]
+"SubCommands"=""
+"MUIVerb"="Magnifier"
+"icon"="imageres.dll,-145"
+"Position"="Bottom"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\01Lens]
+"MUIVerb"="Lens Magnify"
+"Icon"="imageres.dll,-145"
+"Icon"="imageres.dll,-145"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\01Lens\command]
+@="C:\\Windows\\System32\\Magnify.exe /lens"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\02Fullscreen]
+"MUIVerb"="Fullscreen Magnify"
+"Icon"="imageres.dll,-145"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\02Fullscreen\command]
+@="C:\\Windows\\System32\\Magnify.exe /fullscreen"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\03Docked]
+"MUIVerb"="Docked Magnify"
+"Icon"="imageres.dll,-145"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\03Docked\command]
+@="C:\\Windows\\System32\\Magnify.exe /docked"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\04Settings]
+"MUIVerb"="Magnifier Settings"
+"Icon"="imageres.dll,-145"
+"SettingsURI"="ms-settings:easeofaccess-magnifier"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Magnifier\Shell\04Settings\command]
+"DelegateExecute"="{556FF0D6-A1EE-49E5-9FA4-90AE116AD744}"
+
+;Fix the bug of the context menu not showing Take Ownership. Fucking WHY?
+[HKEY_CLASSES_ROOT\*\shell\TakeOwnership]
+@="Take Ownership"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Position"="middle"
+[HKEY_CLASSES_ROOT\*\shell\TakeOwnership\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant *S-1-3-4:F /c /l & pause' -Verb runAs\""
+"IsolatedCommand"= "powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c takeown /f \\\"%1\\\" && icacls \\\"%1\\\" /grant *S-1-3-4:F /c /l & pause' -Verb runAs\""
+[HKEY_CLASSES_ROOT\Directory\shell\TakeOwnership]
+@="Take Ownership"
+"AppliesTo"="NOT (System.ItemPathDisplay:=\"C:\\Users\" OR System.ItemPathDisplay:=\"C:\\ProgramData\" OR System.ItemPathDisplay:=\"C:\\Windows\" OR System.ItemPathDisplay:=\"C:\\Windows\\System32\" OR System.ItemPathDisplay:=\"C:\\Program Files\" OR System.ItemPathDisplay:=\"C:\\Program Files (x86)\")"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Position"="middle"
+[HKEY_CLASSES_ROOT\Directory\shell\TakeOwnership\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c takeown /f \\\"%1\\\" /r /d y && icacls \\\"%1\\\" /grant *S-1-3-4:F /c /l /q & pause' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c takeown /f \\\"%1\\\" /r /d y && icacls \\\"%1\\\" /grant *S-1-3-4:F /c /l /q & pause' -Verb runAs\""
+[HKEY_CLASSES_ROOT\*\shell\runas]
+@="Take Ownership"
+"NoWorkingDirectory"=""
+[HKEY_CLASSES_ROOT\*\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Take Ownership"
+"NoWorkingDirectory"=""
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+[HKEY_CLASSES_ROOT\*\shell\runas]
+@="Take Ownership"
+"NoWorkingDirectory"=""
+[HKEY_CLASSES_ROOT\*\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Take Ownership"
+"NoWorkingDirectory"=""
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+
+;Fix the bug of the context menu not showing Advanced shutdown options.
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown]
+"Icon"="shell32.dll,-28"
+"MUIVerb"="Power"
+"Position"="Bottom"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\001flyout]
+"MUIVerb"="Force apps to close, and shutdown PC with no time-out or warning"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\001flyout\command]
+@="shutdown /s /f /t 0"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\002flyout]
+"MUIVerb"="Shutdown PC with warning"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\002flyout\command]
+@="shutdown /s"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\003flyout]
+"MUIVerb"="Turn off PC with no time-out or warning, but prompt to save any unsaved work"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\003flyout\command]
+@="shutdown /p"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\004flyout]
+"MUIVerb"="Shutdown PC and prepares it for fast startup"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\004flyout\command]
+@="shutdown /s /hybrid /t 0"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\005flyout]
+"MUIVerb"="Force apps to close, shutdown PC, and prepares it for fast startup"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\005flyout\command]
+@="shutdown /s /hybrid /f /t 0"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\006flyout]
+"MUIVerb"="Shutdown PC. On next boot, restart any opened registered apps"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\006flyout\command]
+@="shutdown /sg /t 0"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\007flyout]
+"MUIVerb"="Slide to shut down PC"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Shutdown\shell\007flyout\command]
+@="SlideToShutDown.exe"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart]
+"Icon"="shell32.dll,-16739"
+"Position"="Bottom"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\001flyout]
+"MUIVerb"="Force apps to close, and full shutdown and restart PC with no time-out or warning"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\001flyout\command]
+@="shutdown /r /f /t 0"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\002flyout]
+"MUIVerb"="Full shutdown and restart PC with warning"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\002flyout\command]
+@="shutdown /r"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\003flyout]
+"MUIVerb"="Full shutdown and restart PC. After rebooted, restart any opened registered apps."
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\003flyout\command]
+@="shutdown /g /t 0"
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\004flyout]
+"MUIVerb"="Restart to Advanced Startup Options"
+"CommandFlags"=dword:00000020
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Restart\shell\004flyout\command]
+@="shutdown /r /o /f /t 0"
+
+;Fix the bug of the context menu not showing Run With Priority.
+[HKEY_CLASSES_ROOT\exefile\shell\Priority]
+"MUIVerb"="Run with priority"
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\001flyout]
+@="Realtime"
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\001flyout\command]
+@="cmd /c start \"\" /Realtime \"%1\""
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\002flyout]
+@="High"
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\002flyout\command]
+@="cmd /c start \"\" /High \"%1\""
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\003flyout]
+@="Above normal"
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\003flyout\command]
+@="cmd /c start \"\" /AboveNormal \"%1\""
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\004flyout]
+@="Normal"
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\004flyout\command]
+@="cmd /c start \"\" /Normal \"%1\""
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\005flyout]
+@="Below normal"
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\005flyout\command]
+@="cmd /c start \"\" /BelowNormal \"%1\""
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\006flyout]
+@="Low"
+[HKEY_CLASSES_ROOT\exefile\Shell\Priority\shell\006flyout\command]
+@="cmd /c start \"\" /Low \"%1\""
+
+;Fix the bug of the context menu not showing Unblock Files.
+[HKEY_CLASSES_ROOT\*\shell\unblock]
+"MUIVerb"="Unblock"
+"Extended"=-
+[HKEY_CLASSES_ROOT\*\shell\unblock\command]
+@="powershell.exe Unblock-File -LiteralPath '%L'"
+[HKEY_CLASSES_ROOT\Directory\shell\unblock]
+"MUIVerb"="Unblock"
+"Extended"=-
+"SubCommands"=""
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\001flyout]
+"MUIVerb"="Unblock files in this folder"
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\001flyout\command]
+@="powershell.exe get-childitem -LiteralPath '%L' | Unblock-File"
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\002flyout]
+"MUIVerb"="Unblock files in this folder and subfolders"
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\002flyout\command]
+@="powershell.exe get-childitem -LiteralPath '%L' -recurse | Unblock-File"
