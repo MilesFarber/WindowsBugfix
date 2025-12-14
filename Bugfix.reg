@@ -203,6 +203,9 @@ Windows Registry Editor Version 5.00
 
 ;MINOR FIXES
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:0000002a ;Fixes the bug of CPU scheduling priority being given to background processes instead of foreground processes
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
 "ClearPageFileAtShutdown"=dword:00000001 ;Fixes the bug of the page file not being deleted at shutdown.
 
