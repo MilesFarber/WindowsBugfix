@@ -65,7 +65,7 @@ Windows Registry Editor Version 5.00
 "DeleteTempDirsOnExit"=dword:00000001 ;Fixes the bug of Remote Desktop temp directories not being deleted after session exit.
 "fDenyTSConnections"=dword:00000000 ;Fixes the bug of Terminal Services connections being disabled by default.
 "fSingleSessionPerUser"=dword:00000001 ;Fixes multiple session conflicts.
-"PerSessionTempDir"=dword:00000001 ;Fixes the bug of temp directories not being separated by session by default.
+"PerSessionTempDir"=dword:00000000 ;This is to date the most insane bug I have ever fixed. Setting this to 1 causes 99% of programs to crash because they can't access the temp folder, BUT ONLY, AND EXCLUSIVELY, ON SPECIFIC HARDWARE. It took me hours and hours to troubleshoot this because the EXACT SAME Windows installation, bit by bit, failed on one device but worked perfectly on the other, and the failing device was a FRAMEWORK LAPTOP of all things.
 "RailShowallNotifyIcons"=dword:00000001 ;Fixes the bug of RemoteApp notifications not showing.
 "RDPVGCInstalled"=dword:00000001 ;Fixes the bug of GPU's not working in Remote Desktop.
 
